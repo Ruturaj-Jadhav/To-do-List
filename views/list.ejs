@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -21,4 +21,82 @@
   <button type="submit" name="button">Add</button>
 </form>
   </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ToDo List | Using HTML - CSS , JS | 2020</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <div class="todoList">
+    <div class="cover-img">
+      <div class="cover-inner">
+        <h3 id="dayName"><%=Day%></h3>
+      </div>
+    </div>
+
+    <div class="content">
+      <form class="add" action="/" method="post">
+        <input type="text" name="item" placeholder="Add item..." autocomplete="off">
+        <div class="input-buttons">
+          <!-- <a type="submit" href="/" class="add-todo">
+            <i type = "submit" class="fas fa-plus add plus-icon"></i>
+          </a> -->
+          <button type="submit" class="fas fa-plus add plus-icon"name="button"></button>
+        </div>
+      </form>
+      <ul class="todos align">
+        <li>
+
+          <input type="checkbox" id="todo_1">
+          <label for="todo_1">
+            <span class="check"></span>
+            Grocery store
+          </label>
+        </li>
+
+        <li>
+          <input type="checkbox" id="todo_2">
+          <label for="todo_2">
+            <span class="check"></span>
+            Code a todo list
+          </label>
+        </li>
+
+        <li>
+          <input type="checkbox" id="todo_3">
+          <label for="todo_3">
+            <span class="check"></span>
+            Walk the dog
+          </label>
+        </li>
+    <% for(var i =0 ; i<items.length; i++){ %>
+        <li>
+          <input type="checkbox" id=<%=items[i] %> >
+          <label for=<%=items[i] %> >
+            <span class="check"></span>
+            <%=items[i]%>
+          </label>
+        </li>
+    <%  } %>
+
+      </ul>
+    </div>
+  </div>
+
+</body>
+
 </html>

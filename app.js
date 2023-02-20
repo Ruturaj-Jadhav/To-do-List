@@ -10,10 +10,7 @@ app.get('/' , function(req, res){
   var today = new Date();
 
   const options = {
-    day : "numeric",
-    weekday : "long" ,
-    month : "long",
-    year : "numeric"
+    weekday : "long"
   };
 
  var day = today.toLocaleString("en-US" ,options);
